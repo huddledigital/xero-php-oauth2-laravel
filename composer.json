@@ -1,0 +1,34 @@
+{
+    "name": "huddledigital/xero-php-oauth2-laravel",
+    "type": "library",
+    "description": "Laravel wrapper for XeroAPI/xero-php-oauth2 package",
+    "keywords": ["xero"],
+    "homepage": "https://workwithhuddle.com",
+    "authors": [
+        {
+            "name": "Huddle Digital Ltd",
+            "email": "info@workwithhuddle.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "illuminate/support": "~5.4|^6.0",
+        "xeroapi/xero-php-oauth2": "1.*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huddle\\Xero\\Providers\\XeroServiceProvider"
+            ],
+            "aliases": {
+                "Zendesk": "Huddle\\Xero\\Facades\\Xero"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Huddle\\Xero\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}
